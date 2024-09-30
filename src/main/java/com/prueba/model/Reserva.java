@@ -23,11 +23,11 @@ private int id_medico;
 
 // Relación ManyToOne con la tabla tb_tipo
 @ManyToOne
-@JoinColumn(name = "tipoObjec", referencedColumnName = "id_tipo")
+@JoinColumn(name = "id_tipo", referencedColumnName = "id_tipo", insertable = false, updatable = false)
 private Tipo tipoObject;
 
 // Relación ManyToOne con la tabla tb_medico
 @ManyToOne
-@JoinColumn(name = "medicoObject", referencedColumnName = "id_medico")
+@JoinColumn(name = "id_medico", referencedColumnName = "id_medico", insertable = false, updatable = false)
 private Medico medicoObject;
 }
